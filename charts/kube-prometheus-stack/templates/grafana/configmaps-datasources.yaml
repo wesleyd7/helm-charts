@@ -24,7 +24,7 @@ data:
       access: proxy
       isDefault: true
       jsonData:
-        timeInterval: {{ $scrapeInterval }}
+        timeInterval: '15s'
 {{- if .Values.grafana.sidecar.datasources.createPrometheusReplicasDatasources }}
 {{- range until (int .Values.prometheus.prometheusSpec.replicas) }}
     - name: Prometheus-{{ . }}
